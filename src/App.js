@@ -7,6 +7,8 @@ import './App.css'
 class App extends Component {
   render () {
     return (
+      // Declare the scope of your context
+      // This is useful because you can have multiple contexts
       <ContextProvider>
         <div className='App'>
           <header className='App-header'>
@@ -14,6 +16,8 @@ class App extends Component {
             <h1 className='App-title'>Welcome to React</h1>
           </header>
 
+          {/* No prop drilling for you! */}
+          {/* Only 1 level for example purposes */}
           <CounterPane />
 
         </div>
