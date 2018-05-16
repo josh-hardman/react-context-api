@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-const Context = React.createContext()
+// Expose Context so you can use the Consumer in the render props pattern
+export const Context = React.createContext()
 
 class AppProvider extends Component {
 
@@ -37,10 +38,7 @@ AppProvider.propTypes = {
 }
 
 // Wrap your app in the ContextProvider
-export const ContextProvider = AppProvider
-
-// If you want to access context via Render Props/ FAC
-export const ContextConsumer = Context.Consumer
+export default AppProvider
 
 // If you prefer wrapping your component in an HOC
 export const withContext = Component => props => 
